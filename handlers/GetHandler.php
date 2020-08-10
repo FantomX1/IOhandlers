@@ -1,23 +1,19 @@
 <?php
 
-namespace fantomx1;
+namespace fantomx1\iohandlers\handlers;
+
+use fantomx1\handlers\AbstractHandler;
+
+use fantomx1\iohandlers\adapters\GetAdapter;
+use fantomx1\iohandlers\InputAdapterInterface;
 
 /**
  * Class RequestHandler
  * @package fantomx1
  */
-class RequestHandler implements RequestAdapterInterface
+class GetHandler extends AbstractHandler  implements InputAdapterInterface
 {
 
-
-    public static $adapter;
-
-    /**
-     * @param RequestAdapterInterface $adapter
-     */
-    public static function setAdapter(RequestAdapterInterface $adapter) {
-        static::$adapter = $adapter;
-    }
 
 
     // @TODO: put into trait sharable inside decomposed libraries which are usable directly also
@@ -28,7 +24,7 @@ class RequestHandler implements RequestAdapterInterface
     public static function getAdapter()
     {
         if (!isset(static::$adapter)) {
-            static::$adapter = new RequestAdapter();
+            static::$adapter = new GetAdapter();
         }
 
         return static::$adapter;
@@ -40,13 +36,10 @@ class RequestHandler implements RequestAdapterInterface
      * @param string $default
      * @return string|void
      */
-    public static function get(string $key, string $default = ''):string
+    public static function get(string $key,  $default = '')
     {
 
-
         return static::getAdapter()::get($key, $default);
-
-
 
     }
 
@@ -56,7 +49,7 @@ class RequestHandler implements RequestAdapterInterface
      * @param string|string $value
      * @return string|void
      */
-    public static function set(string $key, string $value):string
+    public static function set(string $key,  $value)
     {
         static::getAdapter()::set($key, $value);
     }

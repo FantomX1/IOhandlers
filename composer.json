@@ -7,11 +7,10 @@
             "email": "fantomx1@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {},
     "autoload": {
         "psr-4": {
-            "fantomx1\\": "."
+            "fantomx1\\iohandlers\\": "."
         }
     }
 }
