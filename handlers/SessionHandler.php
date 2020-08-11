@@ -15,6 +15,10 @@ class SessionHandler extends AbstractHandler implements InputAdapterInterface
 {
 
 
+    /*
+     *
+     */
+    public static $adapter;
 
 
 

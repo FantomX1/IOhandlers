@@ -14,6 +14,10 @@ use fantomx1\iohandlers\InputAdapterInterface;
 class RequestHandler extends AbstractHandler implements InputAdapterInterface
 {
 
+    /*
+     *
+     */
+    public static $adapter;
 
 
 

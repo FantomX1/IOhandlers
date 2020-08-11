@@ -13,8 +13,10 @@ use fantomx1\iohandlers\InputAdapterInterface;
  */
 class GetHandler extends AbstractHandler  implements InputAdapterInterface
 {
-
-
+    /*
+     *
+     */
+    public static $adapter;
 
     // @TODO: put into trait sharable inside decomposed libraries which are usable directly also
     // alone
