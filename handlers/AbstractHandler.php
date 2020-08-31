@@ -1,7 +1,7 @@
 <?php
 
 
-namespace fantomx1\handlers;
+namespace fantomx1\iohandlers\handlers;
 
 
 use fantomx1\iohandlers\AdapterInterface;

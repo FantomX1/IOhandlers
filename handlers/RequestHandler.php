@@ -2,7 +2,7 @@
 
 namespace fantomx1\iohandlers\handlers;
 
-use fantomx1\handlers\AbstractHandler;
+use fantomx1\iohandlers\AbstractHandler;
 
 use fantomx1\iohandlers\adapters\RequestAdapter;
 use fantomx1\iohandlers\InputAdapterInterface;
